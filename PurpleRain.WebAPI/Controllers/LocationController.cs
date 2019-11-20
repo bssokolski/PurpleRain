@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
+using PurpleRain.Models;
+using PurpleRain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

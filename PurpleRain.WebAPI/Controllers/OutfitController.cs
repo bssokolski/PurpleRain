@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
+using PurpleRain.Models;
+using PurpleRain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,41 +13,41 @@ namespace PurpleRain.WebAPI.Controllers
     [Authorize]
     public class OutfitController : ApiController
     {
-        public IHttpActionResult GetAll()
-        {
-            OutfitService outfitService = CreateOutfitService();
-            var outfits = outfitService.GetOutfits();
-            return Ok(outfits);
-        }
+        //public IHttpActionResult GetAll()
+        //{
+        //    OutfitService outfitService = CreateOutfitService();
+        //    var outfits = outfitService.GetOutfits();
+        //    return Ok(outfits);
+        //}
 
         public IHttpActionResult Get(int id)
         {
             OutfitService outfitService = CreateOutfitService();
-            var outfit = outfitService.GetOutfitById(id);
+            var outfit = outfitService.GetOutfitByID(id);
             return Ok(outfit);
         }
 
-        public IHttpActionResult Post(OutfitCreate outfit)
+        public IHttpActionResult Post(int locationid, OutfitCreate model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = CreateOutfitService();
 
-            if (!service.CreateOutfit(outfit))
+            if (!service.CreateOutfit(locationid ,model))
                 return InternalServerError();
 
             return Ok();
         }
 
-        public IHttpActionResult Put(OutfitEdit outfit)
+        public IHttpActionResult Put(int outfitid, OutfitEdit model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = CreateOutfitService();
 
-            if (!service.UpdateOutfit(outfit))
+            if (!service.UpdateOutfit(outfitid, model))
                 return InternalServerError();
 
             return Ok();
