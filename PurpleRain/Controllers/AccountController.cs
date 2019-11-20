@@ -8,10 +8,15 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using PurpleRain.Data;
 using PurpleRain.Models;
 
 namespace PurpleRain.Controllers
 {
+#if !DEBUG
+    [RequireHttps]
+
+#endif
     [Authorize]
     public class AccountController : Controller
     {
@@ -423,7 +428,7 @@ namespace PurpleRain.Controllers
             base.Dispose(disposing);
         }
 
-        #region Helpers
+#region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -480,6 +485,6 @@ namespace PurpleRain.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
-        #endregion
+#endregion
     }
 }
