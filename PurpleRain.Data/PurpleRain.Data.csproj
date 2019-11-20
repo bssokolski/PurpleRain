@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B95F81E-503E-4923-87B2-EB6A82A65629}</ProjectGuid>
+    <ProjectGuid>{2CFB2B4A-083E-44C6-B7C7-DF2503E2AAF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PurpleRain.Data</RootNamespace>
@@ -78,12 +78,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Migrations\201911181938287_initialmigration.cs" />
+    <Compile Include="Migrations\201911181938287_initialmigration.Designer.cs">
+      <DependentUpon>201911181938287_initialmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911181942472_initialmigration1.cs" />
+    <Compile Include="Migrations\201911181942472_initialmigration1.Designer.cs">
+      <DependentUpon>201911181942472_initialmigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Outfit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911181938287_initialmigration.resx">
+      <DependentUpon>201911181938287_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911181942472_initialmigration1.resx">
+      <DependentUpon>201911181942472_initialmigration1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

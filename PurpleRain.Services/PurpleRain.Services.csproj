@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E0C5359-AF5B-45A3-AF57-65A9E2D02E01}</ProjectGuid>
+    <ProjectGuid>{AA4C60FA-0AF8-4CD3-84FE-51061C989E47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PurpleRain.Services</RootNamespace>
@@ -78,11 +78,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionServices.cs" />
+    <Compile Include="LocationServices.cs" />
+    <Compile Include="OutfitServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PurpleRain.Data\PurpleRain.Data.csproj">
+      <Project>{2CFB2B4A-083E-44C6-B7C7-DF2503E2AAF4}</Project>
+      <Name>PurpleRain.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurpleRain.Models\PurpleRain.Models.csproj">
+      <Project>{81776F4C-0534-4E68-831D-439ED9D3C032}</Project>
+      <Name>PurpleRain.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
