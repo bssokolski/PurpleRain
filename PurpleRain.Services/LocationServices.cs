@@ -77,7 +77,7 @@ namespace PurpleRain.Services
                         .Locations
                         .Single(e => e.LocationID == model.LocationID && e.OwnerID == _userId);
                 entity.LocationName = model.LocationName;
-
+                
                 return ctx.SaveChanges() == 1;
             }
         }
