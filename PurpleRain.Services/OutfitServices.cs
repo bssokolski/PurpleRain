@@ -107,7 +107,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -127,7 +127,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -147,7 +147,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -167,7 +167,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -187,7 +187,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -207,7 +207,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -227,7 +227,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -247,7 +247,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -267,7 +267,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -287,7 +287,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
@@ -307,7 +307,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Outfit
-                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                            .Single(e => e.OtempRange == range && e.LocationID == locationID);
                     return
                         new Outfit
                         {
