@@ -86,9 +86,8 @@ namespace PurpleRain.Services
             }
         }
 
-        public Actionz GetActionByTemp(int temp)
+        public Actionz GetActionByTemp(decimal temp, int locationID)
         {
-
 
             if (temp >= 0 && temp < 11)
             {
@@ -99,7 +98,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -117,7 +116,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -135,7 +134,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -153,7 +152,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -171,7 +170,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -189,7 +188,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -207,7 +206,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -225,7 +224,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -243,7 +242,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -261,7 +260,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {
@@ -279,7 +278,7 @@ namespace PurpleRain.Services
                     var entity =
                         ctx
                             .Action
-                            .Single(e => e.AtempRange == range);
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
                     return
                         new Actionz
                         {

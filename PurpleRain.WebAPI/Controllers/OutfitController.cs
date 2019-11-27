@@ -19,10 +19,10 @@ namespace PurpleRain.WebAPI.Controllers
         //    var outfits = outfitService.GetOutfits();
         //    return Ok(outfits);
         //}
-        public IHttpActionResult GetEnum(int temp)
+        public IHttpActionResult GetEnum(decimal temp, int locationID)
         {
             var outfitService = CreateOutfitService();
-            var outfit = outfitService.GetOutfitByTemp(temp);
+            var outfit = outfitService.GetOutfitByTemp(temp, locationID);
             return Ok(outfit);
         }
 
