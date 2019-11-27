@@ -23,6 +23,7 @@ namespace PurpleRain.Services
                 {
                     OwnerID = _userId,
                     LocationName = model.LocationName,
+                    ZipCode = model.ZipCode
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,6 +46,7 @@ namespace PurpleRain.Services
                                 {
                                     LocationID = e.LocationID,
                                     LocationName = e.LocationName,
+                                    
                                 }
                         );
 
@@ -64,7 +66,6 @@ namespace PurpleRain.Services
                     {
                         LocationID = entity.LocationID,
                         LocationName = entity.LocationName,
-                        CityName = entity.CityName
                     };
             }
         }
@@ -76,8 +77,10 @@ namespace PurpleRain.Services
                     ctx
                         .Locations
                         .Single(e => e.LocationID == model.LocationID && e.OwnerID == _userId);
-                entity.LocationName = model.LocationName;
-                
+
+                entity.ZipCode = model.ZipCode;
+                entity.LocationName=model.LocationName;
+
                 return ctx.SaveChanges() == 1;
             }
         }

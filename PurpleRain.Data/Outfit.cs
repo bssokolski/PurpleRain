@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace PurpleRain.Data
 {
-    public enum TopType { Comfort =1, Tshirt, Sweater, Hoody, Jacket, Coat, Dressshirt, Suit, Prince}
-    public enum BottomType { Sweatpants =1, Shorts, Pants, Skirt }
+    public enum TopType { Comfort =1, Tshirt, Sweater, Hoody, Jacket, Coat, Dressshirt, Suit, Dress, Prince}
+    public enum BottomType { Sweatpants =1, Shorts, Pants, Mini_Skirt, Midi_Skirt,Maxi_Skirt, Dress, Leggings, Jeans,  }
+
+    public enum Temperature { zero = 0, one, two, three, four, five, six, seven, eight, nine, ten}
     public class Outfit
     {
         [Key]
@@ -21,6 +23,6 @@ namespace PurpleRain.Data
         [ForeignKey("Location")]
         public int? LocationID { get; set; }
         public virtual Location Location { get; set; }
-
+        public Temperature OtempRange { get; set; }
     }
 }

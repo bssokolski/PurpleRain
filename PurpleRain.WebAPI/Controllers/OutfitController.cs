@@ -13,40 +13,49 @@ namespace PurpleRain.WebAPI.Controllers
     [Authorize]
     public class OutfitController : ApiController
     {
-        //public IHttpActionResult Get()
+        //public IHttpActionResult GetAll()
         //{
         //    OutfitService outfitService = CreateOutfitService();
         //    var outfits = outfitService.GetOutfits();
         //    return Ok(outfits);
         //}
+        public IHttpActionResult GetEnum(decimal temp, int locationID)
+        {
+            var outfitService = CreateOutfitService();
+            var outfit = outfitService.GetOutfitByTemp(temp, locationID);
+            return Ok(outfit);
+        }
+
         public IHttpActionResult Get(int id)
         {
-            OutfitService outfitService = CreateOutfitService();
+            var outfitService = CreateOutfitService();
             var outfit = outfitService.GetOutfitByID(id);
             return Ok(outfit);
         }
 
-        public IHttpActionResult Post(int locationID,OutfitCreate outfit)
+        public IHttpActionResult Post(int locationid, OutfitCreate model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = CreateOutfitService();
 
-            if (!service.CreateOutfit(locationID,outfit))
+            if (!service.CreateOutfit(locationid ,model))
                 return InternalServerError();
+
             return Ok();
         }
 
-        public IHttpActionResult Put(int outfitid, OutfitEdit outfit)
+        public IHttpActionResult Put(int outfitid, OutfitEdit model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = CreateOutfitService();
 
-            if (!service.UpdateOutfit(outfitid, outfit))
+            if (!service.UpdateOutfit(outfitid, model))
                 return InternalServerError();
+
             return Ok();
         }
 
@@ -56,8 +65,10 @@ namespace PurpleRain.WebAPI.Controllers
 
             if (!service.DeleteOutfit(id))
                 return InternalServerError();
+
             return Ok();
         }
+
         private OutfitService CreateOutfitService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

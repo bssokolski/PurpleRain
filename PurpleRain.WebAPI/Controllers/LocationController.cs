@@ -13,12 +13,13 @@ namespace PurpleRain.WebAPI.Controllers
     [Authorize]
     public class LocationController : ApiController
     {
-        public IHttpActionResult Get()
+        public IHttpActionResult GetAll()
         {
             LocationService locationService = CreateLocationService();
             var locations = locationService.GetLocations();
             return Ok(locations);
         }
+
         public IHttpActionResult Get(int id)
         {
             LocationService locationService = CreateLocationService();
@@ -35,6 +36,7 @@ namespace PurpleRain.WebAPI.Controllers
 
             if (!service.CreateLocation(location))
                 return InternalServerError();
+
             return Ok();
         }
 
@@ -47,6 +49,7 @@ namespace PurpleRain.WebAPI.Controllers
 
             if (!service.UpdateLocation(location))
                 return InternalServerError();
+
             return Ok();
         }
 
@@ -56,13 +59,15 @@ namespace PurpleRain.WebAPI.Controllers
 
             if (!service.DeleteLocation(id))
                 return InternalServerError();
+
             return Ok();
         }
+
         private LocationService CreateLocationService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var noteService = new LocationService(userId);
-            return noteService;
+            var locationService = new LocationService(userId);
+            return locationService;
         }
     }
 }

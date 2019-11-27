@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace PurpleRain.Data
 {
     public enum ActivityType { Biking = 1, Walking, Hiking, Swimming, Sports, Gaming, Movie, Reading, Studying, Skiing, Snowboarding, Surfing, Roleplaying, Dancing,  }
-    public class Action
+    public enum Atemperature { zero = 0, one, two, three, four, five, six, seven, eight, nine, ten }
+    public class Actionz
     {
         [Key]
         public int ActivityID { get; set; }
@@ -17,5 +18,6 @@ namespace PurpleRain.Data
         [ForeignKey("Location")]
         public int? LocationID { get; set; }
         public virtual Location Location { get; set; }
+        public Atemperature AtempRange { get; set; }
     }
 }
