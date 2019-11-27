@@ -18,9 +18,16 @@ namespace PurpleRain.WebAPI.Controllers
         //    var actions = actionService.GetActions();
         //    return Ok(actions);
         //}
+        public IHttpActionResult GetEnum(decimal temp, int locationID)
+        {
+            var actionService = CreateActionService();
+            var action = actionService.GetActionByTemp(temp, locationID);
+            return Ok(action);
+        }
+
         public IHttpActionResult Get(int id)
         {
-            ActionService actionService = CreateActionService();
+            var actionService = CreateActionService();
             var action = actionService.GetActionByID(id);
             return Ok(action);
         }

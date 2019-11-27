@@ -13,9 +13,12 @@ namespace PurpleRain.Data
         [Key]
         public int LocationID { get; set; }
         [MaxLength(30, ErrorMessage = "Limit characters to 30")]
+        [Required]
         public string LocationName { get; set; }
-        [MaxLength(30, ErrorMessage = "Limit characters to 30")]
-        public string CityName { get; set; }
+        [MinLength(5, ErrorMessage ="Common 5 digit Zip Code")]
+        [MaxLength(5, ErrorMessage ="Common 5 digit Zip Code")]
+        [Required]
+        public int ZipCode { get; set; }
         [Required]
         public Guid OwnerID { get; set; }
         [ForeignKey("Outfit")]
@@ -23,6 +26,7 @@ namespace PurpleRain.Data
         public virtual Outfit Outfit { get; set; }
         [ForeignKey("Action")]
         public int? ActivityID { get; set; }
-        public virtual Action Action { get; set; }
+        public virtual Actionz Action { get; set; }
+
     }
 }

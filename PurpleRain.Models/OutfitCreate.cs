@@ -15,5 +15,7 @@ namespace PurpleRain.Models
         [Required]
         public TopType Top { get; set; }
         public BottomType Bottom { get; set; }
+        public int OutfitID { get; set; }
+        public Temperature OtempRange { get; set; }
     }
 }

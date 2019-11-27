@@ -21,9 +21,12 @@ namespace PurpleRain.Services
             var entity =
                 new Outfit()
                 {
+
                     OutfitName = model.OutfitName,
                     Top = model.Top,
                     Bottom = model.Bottom,
+                    OtempRange = model.OtempRange
+
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -74,9 +77,9 @@ namespace PurpleRain.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteOutfit(int outfitid) 
+        public bool DeleteOutfit(int outfitid)
         {
-            using (var ctx = new ApplicationDbContext()) 
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
@@ -90,6 +93,234 @@ namespace PurpleRain.Services
                 ctx.Outfit.Remove(entity);
                 return ctx.SaveChanges() == 2;
             }
+        }
+
+        public Outfit GetOutfitByTemp(decimal temp, int locationID)
+        {
+
+            if (temp >= 0 && temp < 11)
+            {
+                Temperature range = (Temperature)0;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 11 && temp < 21)
+            {
+                Temperature range = (Temperature)1;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 21 && temp < 31)
+            {
+                Temperature range = (Temperature)2;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 31 && temp < 41)
+            {
+                Temperature range = (Temperature)3;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 41 && temp < 51)
+            {
+                Temperature range = (Temperature)4;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 51 && temp < 61)
+            {
+                Temperature range = (Temperature)5;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 61 && temp < 71)
+            {
+                Temperature range = (Temperature)6;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 71 && temp < 81)
+            {
+                Temperature range = (Temperature)7;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 81 && temp < 91)
+            {
+                Temperature range = (Temperature)8;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else if (temp >= 91 && temp < 101)
+            {
+                Temperature range = (Temperature)9;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            }
+            else 
+            {
+                Temperature range = (Temperature)10;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Outfit
+                            .Single(e => e.OtempRange == range && e.locationID == locationID);
+                    return
+                        new Outfit
+                        {
+                            OutfitID = entity.OutfitID,
+                            OutfitName = entity.OutfitName,
+                            Top = entity.Top,
+                            Bottom = entity.Bottom,
+                        };
+                }
+            };
+
+
+
         }
     }
 }
