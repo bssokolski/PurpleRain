@@ -23,10 +23,10 @@ namespace PurpleRain.Data
         public Guid OwnerID { get; set; }
         [ForeignKey("Outfit")]
         public int? OutfitID { get; set; }
-        public virtual Outfit Outfit { get; set; }
         [ForeignKey("Action")]
         public int? ActivityID { get; set; }
+        public virtual Action Action { get; set; }
+        public virtual Outfit Outfit { get; set; }
         public virtual Actionz Action { get; set; }
-
     }
 }

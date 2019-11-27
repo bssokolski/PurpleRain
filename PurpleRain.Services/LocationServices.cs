@@ -77,6 +77,7 @@ namespace PurpleRain.Services
                     ctx
                         .Locations
                         .Single(e => e.LocationID == model.LocationID && e.OwnerID == _userId);
+
                 entity.ZipCode = model.ZipCode;
                 entity.LocationName=model.LocationName;
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace PurpleRain.Data
         [Key]
         public int ActivityID { get; set; }
         public ActivityType Activity { get; set; }
+        [ForeignKey("Location")]
+        public int? LocationID { get; set; }
+        public virtual Location Location { get; set; }
         public Atemperature AtempRange { get; set; }
     }
 }
