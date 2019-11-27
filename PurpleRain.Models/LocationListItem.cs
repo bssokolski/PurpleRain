@@ -14,10 +14,11 @@ namespace PurpleRain.Models
         public int LocationID { get; set; }
         [Display(Name = "Location Name")]
         public string LocationName { get; set; }
+       
         [Display(Name = "Outfit")]
         public Outfit Outfit { get; set; }
         [Display(Name = "Activity")]
-        public Data.Action Action { get; set; } // "Action" is used elsewhere (system.action), Had to Specify it as Action class from data
+        public Data.Actionz Action { get; set; } // "Action" is used elsewhere (system.action), Had to Specify it as Action class from data
 
     }
 }

@@ -39,7 +39,7 @@ namespace PurpleRain.Data
             return new ApplicationDbContext();
         }
         public DbSet<Location> Locations { get; set; }
-        public DbSet<Action> Action { get; set; }
+        public DbSet<Actionz> Action { get; set; }
         public DbSet<Outfit> Outfit { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

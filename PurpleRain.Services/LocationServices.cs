@@ -45,6 +45,7 @@ namespace PurpleRain.Services
                                 {
                                     LocationID = e.LocationID,
                                     LocationName = e.LocationName,
+                                    
                                 }
                         );
 
@@ -64,7 +65,9 @@ namespace PurpleRain.Services
                     {
                         LocationID = entity.LocationID,
                         LocationName = entity.LocationName,
-                        CityName = entity.CityName
+                        CityName = entity.CityName,
+                       
+                       
                     };
             }
         }
@@ -76,7 +79,8 @@ namespace PurpleRain.Services
                     ctx
                         .Locations
                         .Single(e => e.LocationID == model.LocationID && e.OwnerID == _userId);
-                entity.LocationName = model.LocationName;
+                entity.CityName = model.CityName;
+                entity.LocationName=model.LocationName;
 
                 return ctx.SaveChanges() == 1;
             }
