@@ -19,7 +19,7 @@ namespace PurpleRain.Services
         public bool CreateAction(int locationid, ActionCreate model)
         {
             var entity =
-                new Data.Action() //"Data". resolves error that states ambiguous reference between PurpleRain.Data.Action and System.Action
+                new Data.Actionz() //"Data". resolves error that states ambiguous reference between PurpleRain.Data.Action and System.Action
                 {
                     Activity = model.Activity,
                 };
@@ -84,6 +84,209 @@ namespace PurpleRain.Services
                 ctx.Action.Remove(entity);
                 return ctx.SaveChanges() == 2;
             }
+        }
+
+        public Actionz GetActionByTemp(decimal temp, int locationID)
+        {
+
+            if (temp >= 0 && temp < 11)
+            {
+                Atemperature range = (Atemperature)0;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 11 && temp < 21)
+            {
+                Atemperature range = (Atemperature)1;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 21 && temp < 31)
+            {
+                Atemperature range = (Atemperature)2;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 31 && temp < 41)
+            {
+                Atemperature range = (Atemperature)3;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 41 && temp < 51)
+            {
+                Atemperature range = (Atemperature)4;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 51 && temp < 61)
+            {
+                Atemperature range = (Atemperature)5;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 61 && temp < 71)
+            {
+                Atemperature range = (Atemperature)6;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 71 && temp < 81)
+            {
+                Atemperature range = (Atemperature)7;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 81 && temp < 91)
+            {
+                Atemperature range = (Atemperature)8;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity
+                        };
+                }
+            }
+            else if (temp >= 91 && temp < 101)
+            {
+                Atemperature range = (Atemperature)9;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity,
+                        };
+                }
+            }
+            else
+            {
+                Atemperature range = (Atemperature)10;
+
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Action
+                            .Single(e => e.AtempRange == range && e.locationID == locationID);
+                    return
+                        new Actionz
+                        {
+                            ActivityID = entity.ActivityID,
+                            Activity = entity.Activity,
+                        };
+                }
+            };
         }
     }
 }

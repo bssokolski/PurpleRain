@@ -10,6 +10,6 @@ namespace PurpleRain.Models
     {
         public int LocationID { get; set; }
         public string LocationName { get; set; }
-        public string CityName { get; set; }
+        public int ZipCode { get; set; }
     }
 }
