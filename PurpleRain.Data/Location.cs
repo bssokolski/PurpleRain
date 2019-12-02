@@ -15,8 +15,6 @@ namespace PurpleRain.Data
         [MaxLength(30, ErrorMessage = "Limit characters to 30")]
         [Required]
         public string LocationName { get; set; }
-        [MinLength(5, ErrorMessage ="Common 5 digit Zip Code")]
-        [MaxLength(5, ErrorMessage ="Common 5 digit Zip Code")]
         [Required]
         public int ZipCode { get; set; }
         [Required]

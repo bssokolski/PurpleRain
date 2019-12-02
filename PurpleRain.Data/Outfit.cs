@@ -20,9 +20,7 @@ namespace PurpleRain.Data
         public string OutfitName { get; set; }
         public TopType Top { get; set; }
         public BottomType Bottom { get; set; }
-        [ForeignKey("Location")]
         public int? LocationID { get; set; }
-        public virtual Location Location { get; set; }
         public Temperature OtempRange { get; set; }
     }
 }
