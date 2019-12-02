@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PurpleRain.Models")]
+[assembly: AssemblyTitle("PurpleRain.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PurpleRain.Models")]
+[assembly: AssemblyProduct("PurpleRain.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("81776f4c-0534-4e68-831d-439ed9d3c032")]
+[assembly: Guid("2cfb2b4a-083e-44c6-b7c7-df2503e2aaf4")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81776F4C-0534-4E68-831D-439ED9D3C032}</ProjectGuid>
+    <ProjectGuid>{AA4C60FA-0AF8-4CD3-84FE-51061C989E47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PurpleRain.Models</RootNamespace>
-    <AssemblyName>PurpleRain.Models</AssemblyName>
+    <RootNamespace>PurpleRain.Services</RootNamespace>
+    <AssemblyName>PurpleRain.Services</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -81,18 +81,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionCreate.cs" />
-    <Compile Include="ActionDetails.cs" />
-    <Compile Include="ActionEdit.cs" />
-    <Compile Include="ActionListItem.cs" />
-    <Compile Include="LocationCreate.cs" />
-    <Compile Include="LocationDetails.cs" />
-    <Compile Include="LocationEdit.cs" />
-    <Compile Include="LocationListItem.cs" />
-    <Compile Include="OutfitCreate.cs" />
-    <Compile Include="OutfitDetails.cs" />
-    <Compile Include="OutfitEdit.cs" />
-    <Compile Include="OutfitListItem.cs" />
+    <Compile Include="ActionServices.cs" />
+    <Compile Include="LocationServices.cs" />
+    <Compile Include="OutfitServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +94,10 @@
     <ProjectReference Include="..\PurpleRain.Data\PurpleRain.Data.csproj">
       <Project>{2CFB2B4A-083E-44C6-B7C7-DF2503E2AAF4}</Project>
       <Name>PurpleRain.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurpleRain.Models\PurpleRain.Models.csproj">
+      <Project>{81776F4C-0534-4E68-831D-439ED9D3C032}</Project>
+      <Name>PurpleRain.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
