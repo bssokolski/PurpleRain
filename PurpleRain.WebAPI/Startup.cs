@@ -17,11 +17,11 @@ namespace PurpleRain.WebAPI
         {
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureAuth(app);
-            createAdminRole();
+            CreateAdminRole();
         }
 
         //Creating admin role
-        private void createAdminRole()
+        private void CreateAdminRole()
         {
             ApplicationDbContext context = new ApplicationDbContext();
 
@@ -30,13 +30,17 @@ namespace PurpleRain.WebAPI
 
             if (!roleManager.RoleExists("Admin"))
             {
-                var role = new IdentityRole();
-                role.Name = "Admin";
+                var role = new IdentityRole
+                {
+                    Name = "Admin"
+                };
                 roleManager.Create(role);
 
-                var user = new ApplicationUser();
-                user.UserName = "UserAdmin";
-                user.Email = "useradmin@gmail.com";
+                var user = new ApplicationUser
+                {
+                    UserName = "UserAdmin",
+                    Email = "useradmin@gmail.com"
+                };
                 string userPassword = "UserAdmin1!";
 
                 var checkUser = userManager.Create(user, userPassword);
