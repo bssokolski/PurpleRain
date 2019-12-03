@@ -45,8 +45,7 @@ namespace PurpleRain.Services
                                 new LocationListItem
                                 {
                                     LocationID = e.LocationID,
-                                    LocationName = e.LocationName,
-                                    
+                                    LocationName = e.LocationName
                                 }
                         );
 

@@ -26,7 +26,6 @@ namespace PurpleRain.Services
                     Top = model.Top,
                     Bottom = model.Bottom,
                     OtempRange = model.OtempRange
-
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -114,7 +113,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -134,7 +133,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -154,7 +153,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -174,7 +173,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -194,7 +193,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -214,7 +213,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -234,7 +233,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -254,7 +253,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -274,7 +273,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -294,7 +293,7 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             }
@@ -314,13 +313,10 @@ namespace PurpleRain.Services
                             OutfitID = entity.OutfitID,
                             OutfitName = entity.OutfitName,
                             Top = entity.Top,
-                            Bottom = entity.Bottom,
+                            Bottom = entity.Bottom
                         };
                 }
             };
-
-
-
         }
     }
 }
