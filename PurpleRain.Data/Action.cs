@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace PurpleRain.Data
 {
-    public enum ActivityType { Biking = 1, Walking, Hiking, Swimming, Sports, Gaming, Movie, Reading, Studying, Skiing, Snowboarding, Surfing, Roleplaying, Dancing,  }
-    public enum Atemperature { zero = 0, one, two, three, four, five, six, seven, eight, nine, ten }
+    public enum ActivityType { Biking = 1, Walking, Hiking, Swimming, Sports, Gaming, Movie, Reading, Studying, Skiing, Snowboarding, Surfing, Roleplaying, Dancing }
+    public enum Atemperature { Zero = 0, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten }
     public class Actionz
     {
         [Key]

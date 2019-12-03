@@ -265,7 +265,7 @@ namespace PurpleRain.Services
                         new Actionz
                         {
                             ActivityID = entity.ActivityID,
-                            Activity = entity.Activity,
+                            Activity = entity.Activity
                         };
                 }
             }
@@ -283,7 +283,7 @@ namespace PurpleRain.Services
                         new Actionz
                         {
                             ActivityID = entity.ActivityID,
-                            Activity = entity.Activity,
+                            Activity = entity.Activity
                         };
                 }
             };
