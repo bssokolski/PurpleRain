@@ -38,7 +38,6 @@ namespace PurpleRain.WebAPI.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
         [Display(Name = "UserRole")]
         public string UserRole { get; set; }
 
