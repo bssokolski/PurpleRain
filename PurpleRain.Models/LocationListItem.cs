@@ -14,7 +14,8 @@ namespace PurpleRain.Models
         public int LocationID { get; set; }
         [Display(Name = "Location Name")]
         public string LocationName { get; set; }
-       
+        public int ZipCode { get; set; }
+
         [Display(Name = "Outfit")]
         public Outfit Outfit { get; set; }
         [Display(Name = "Activity")]
